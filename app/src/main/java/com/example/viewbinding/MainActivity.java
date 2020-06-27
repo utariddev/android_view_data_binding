@@ -3,6 +3,8 @@ package com.example.viewbinding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import com.example.viewbinding.databinding.ActivityMainBinding;
@@ -17,6 +19,26 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        String test = "test string";
+        binding.setTest(test);
+
+        binding.editTextTest.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                binding.setTest(binding.editTextTest.getText().toString());
+            }
+        });
 
         binding.buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
