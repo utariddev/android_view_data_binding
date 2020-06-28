@@ -1,4 +1,4 @@
-package com.example.viewbinding;
+package com.example.binding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 
-import com.example.viewbinding.databinding.ActivityMainBinding;
+import com.example.binding.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

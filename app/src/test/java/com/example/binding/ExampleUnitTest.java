@@ -1,4 +1,4 @@
-package com.example.viewbinding;
+package com.example.binding;
 
 import org.junit.Test;
 
